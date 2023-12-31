@@ -9,7 +9,7 @@ const userSchema = new mongoose.Schema(
       type: String,
     },
     businessEmail: { type: String },
-    businessPhone: { type: String },
+    businessCategory: { type: String },
     accountNumber: { type: Number },
     houseNumber: { type: Number },
     streetNumber: { type: Number },
