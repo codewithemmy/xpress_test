@@ -28,7 +28,11 @@ class AdminRepository {
   }
 
   static async updateAdminDetails(query, params) {
-    return Admin.findOneAndUpdate({ ...query }, { $set: { ...params } })
+    return Admin.findOneAndUpdate(
+      { ...query },
+      { $set: { ...params } },
+      { new: true, runValidators: true }
+    )
   }
 
   static async deleteAdminDetails(query) {
